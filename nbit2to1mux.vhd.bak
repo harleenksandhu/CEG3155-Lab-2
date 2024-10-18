@@ -1,0 +1,21 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY mux2to1 IS 
+	GENERIC(n: integer:=8)
+	PORT ( i_0, i_1 : IN std_logic_vector( n-1 downto 0);
+			 sel1 : IN std_logic;
+			 o : OUT std_logic_vector( n-1 downto 0));
+END mux2to1;
+
+ARCHITECTURE behav of mux2to1 IS
+	BEGIN
+		PROCESS( i_0, i_1, sel1)
+			BEGIN
+				IF(sel1 = '0') THEN
+					o <= i_0; 
+				ELSE
+					o <= i_1;
+			END IF; 
+	END PROCESS;
+END behav;

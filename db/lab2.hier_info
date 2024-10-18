@@ -1,0 +1,103 @@
+|threebitcounter
+inc_i => nbitreg:reg.load
+greset => nbitreg:reg.reset_b
+clk => nbitreg:reg.clk
+count[0] <= nbitreg:reg.dout[0]
+count[1] <= nbitreg:reg.dout[1]
+count[2] <= nbitreg:reg.dout[2]
+
+
+|threebitcounter|threeBitAdder:adder
+i_Ai[0] => oneBitAdder:add0.i_Ai
+i_Ai[1] => oneBitAdder:add1.i_Ai
+i_Ai[2] => oneBitAdder:add2.i_Ai
+i_Bi[0] => oneBitAdder:add0.i_Bi
+i_Bi[1] => oneBitAdder:add1.i_Bi
+i_Bi[2] => oneBitAdder:add2.i_Bi
+o_CarryOut <= oneBitAdder:add0.o_CarryOut
+o_Sum[0] <= oneBitAdder:add0.o_Sum
+o_Sum[1] <= oneBitAdder:add1.o_Sum
+o_Sum[2] <= oneBitAdder:add2.o_Sum
+
+
+|threebitcounter|threeBitAdder:adder|oneBitAdder:add2
+i_CarryIn => int_CarryOut3.IN0
+i_CarryIn => int_CarryOut1.IN0
+i_Ai => int_CarryOut3.IN1
+i_Ai => int_CarryOut1.IN1
+i_Bi => int_CarryOut2.IN1
+i_Bi => o_Sum.IN1
+o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
+o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|threebitcounter|threeBitAdder:adder|oneBitAdder:add1
+i_CarryIn => int_CarryOut3.IN0
+i_CarryIn => int_CarryOut1.IN0
+i_Ai => int_CarryOut3.IN1
+i_Ai => int_CarryOut1.IN1
+i_Bi => int_CarryOut2.IN1
+i_Bi => o_Sum.IN1
+o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
+o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|threebitcounter|threeBitAdder:adder|oneBitAdder:add0
+i_CarryIn => int_CarryOut3.IN0
+i_CarryIn => int_CarryOut1.IN0
+i_Ai => int_CarryOut3.IN1
+i_Ai => int_CarryOut1.IN1
+i_Bi => int_CarryOut2.IN1
+i_Bi => o_Sum.IN1
+o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
+o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|threebitcounter|nbitreg:reg
+reset_b => enARdFF_2:reg:2:biti.i_resetBar
+reset_b => enARdFF_2:reg:1:biti.i_resetBar
+reset_b => enARdFF_2:reg:0:biti.i_resetBar
+din[0] => enARdFF_2:reg:0:biti.i_d
+din[1] => enARdFF_2:reg:1:biti.i_d
+din[2] => enARdFF_2:reg:2:biti.i_d
+load => enARdFF_2:reg:2:biti.i_enable
+load => enARdFF_2:reg:1:biti.i_enable
+load => enARdFF_2:reg:0:biti.i_enable
+clk => enARdFF_2:reg:2:biti.i_clock
+clk => enARdFF_2:reg:1:biti.i_clock
+clk => enARdFF_2:reg:0:biti.i_clock
+dout[0] <= enARdFF_2:reg:0:biti.o_q
+dout[1] <= enARdFF_2:reg:1:biti.o_q
+dout[2] <= enARdFF_2:reg:2:biti.o_q
+dout_b[0] <= enARdFF_2:reg:0:biti.o_qBar
+dout_b[1] <= enARdFF_2:reg:1:biti.o_qBar
+dout_b[2] <= enARdFF_2:reg:2:biti.o_qBar
+
+
+|threebitcounter|nbitreg:reg|enARdFF_2:\reg:2:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|threebitcounter|nbitreg:reg|enARdFF_2:\reg:1:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|threebitcounter|nbitreg:reg|enARdFF_2:\reg:0:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+

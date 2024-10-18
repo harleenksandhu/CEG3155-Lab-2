@@ -1,0 +1,49 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all;
+
+ENTITY fourbitreg IS 
+	PORT(rst_b: in std_logic;
+		  din : in std_logic_vector(3 downto 0);
+		  load, clk: in std_logic;
+		  dout : out std_logic_vector(3 downto 0));
+END fourbitreg;
+
+ARCHITECTURE struc OF fourbitreg IS
+COMPONENT enardFF_2 
+	PORT(reset_b, d, enable, clk : in std_logic;
+		  q, q_b : out std_logic);
+END COMPONENT;
+
+BEGIN
+	bit3: enardFF_2  
+		PORT MAP(reset_b => rst_b, 
+					d => din(3), 
+					enable => load, 
+					clk => clk, 
+					q => dout(3),
+					q_b => open);
+	bit2: enardFF_2  
+		PORT MAP(reset_b => rst_b, 
+					d => din(2), 
+					enable => load, 
+					clk => clk, 
+					q => dout(2),
+					q_b => open);
+	bit1: enardFF_2  
+		PORT MAP(reset_b => rst_b, 
+					d => din(1), 
+					enable => load, 
+					clk => clk, 
+					q => dout(1),
+					q_b => open);
+	bit0: enardFF_2  
+		PORT MAP(reset_b => rst_b, 
+				d => din(0), 
+				enable => load, 
+				clk => clk, 
+				q => dout(0),
+				q_b => open);
+	
+END struc;
+			
+		
