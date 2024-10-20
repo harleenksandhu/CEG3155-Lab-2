@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab2
-Fri Oct 18 01:07:21 2024
+Sat Oct 19 22:28:50 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,14 +13,62 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: nbitreg:reg
- 11. Port Connectivity Checks: "nbitreg:reg"
- 12. Port Connectivity Checks: "threeBitAdder:adder|oneBitAdder:add2"
- 13. Port Connectivity Checks: "threeBitAdder:adder"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxA
+ 11. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitreg:remainder_reg
+ 12. Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxB
+ 13. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg
+ 14. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0
+ 15. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1
+ 16. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi
+ 17. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi
+ 18. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi
+ 19. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi
+ 20. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi
+ 21. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi
+ 22. Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxop1
+ 23. Parameter Settings for User Entity Instance: divider_datapath:dp|nbit4to1mux:muxop2
+ 24. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitaddersubtractor:adder_subtractor
+ 25. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg
+ 26. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:mux0
+ 27. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:muxn_1
+ 28. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:6:muxi
+ 29. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:5:muxi
+ 30. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:4:muxi
+ 31. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:3:muxi
+ 32. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:2:muxi
+ 33. Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:1:muxi
+ 34. Parameter Settings for User Entity Instance: divider_datapath:dp|threebitcounter:counter|nbitreg:reg
+ 35. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:9:state_i"
+ 36. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:8:state_i"
+ 37. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:7:state_i"
+ 38. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:6:state_i"
+ 39. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:5:state_i"
+ 40. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:4:state_i"
+ 41. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:3:state_i"
+ 42. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:2:state_i"
+ 43. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:1:state_i"
+ 44. Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:state0"
+ 45. Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|nbitreg:reg"
+ 46. Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add0"
+ 47. Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder"
+ 48. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:quotient_shiftreg"
+ 49. Port Connectivity Checks: "divider_datapath:dp|nbit2to1mux:muxop1"
+ 50. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi"
+ 51. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi"
+ 52. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi"
+ 53. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi"
+ 54. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi"
+ 55. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi"
+ 56. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1"
+ 57. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0"
+ 58. Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg"
+ 59. Port Connectivity Checks: "divider_datapath:dp|nbit2to1mux:muxB"
+ 60. Port Connectivity Checks: "divider_datapath:dp|nbitreg:remainder_reg"
+ 61. Port Connectivity Checks: "divider_datapath:dp"
+ 62. Elapsed Time Per Partition
+ 63. Analysis & Synthesis Messages
 
 
 
@@ -46,16 +94,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Oct 18 01:07:21 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 19 22:28:50 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; lab2                                       ;
-; Top-level Entity Name              ; threebitcounter                            ;
+; Top-level Entity Name              ; divider_top                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 1                                          ;
-;     Total combinational functions  ; 1                                          ;
-;     Dedicated logic registers      ; 1                                          ;
-; Total registers                    ; 1                                          ;
-; Total pins                         ; 6                                          ;
+; Total logic elements               ; 81                                         ;
+;     Total combinational functions  ; 80                                         ;
+;     Dedicated logic registers      ; 37                                         ;
+; Total registers                    ; 37                                         ;
+; Total pins                         ; 26                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -69,7 +117,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; threebitcounter    ; lab2               ;
+; Top-level entity name                                                      ; divider_top        ; lab2               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -167,70 +215,138 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
-; enARdFF_2.vhd                    ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd       ;         ;
-; nbitreg.vhd                      ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd         ;         ;
-; threebitcounter.vhd              ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd ;         ;
-; threebitadder.vhd                ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd   ;         ;
-; onebitadder.vhd                  ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
+; divider_datapath.vhd             ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_datapath.vhd    ;         ;
+; onebit4to1mux.vhd                ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebit4to1mux.vhd       ;         ;
+; enARdFF_2.vhd                    ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd           ;         ;
+; nbitreg.vhd                      ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd             ;         ;
+; nbitshiftreg.vhd                 ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitshiftreg.vhd        ;         ;
+; nbit2to1mux.vhd                  ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit2to1mux.vhd         ;         ;
+; threebitcounter.vhd              ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd     ;         ;
+; threebitadder.vhd                ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd       ;         ;
+; onebitadder.vhd                  ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd         ;         ;
+; nbit4to1mux.vhd                  ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit4to1mux.vhd         ;         ;
+; nbitaddersubtractor.vhd          ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd ;         ;
+; fulladder.vhd                    ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/fulladder.vhd           ;         ;
+; divider_controlpath.vhd          ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_controlpath.vhd ;         ;
+; divider_top.vhd                  ; yes             ; User VHDL File  ; C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd         ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                           ;
-+---------------------------------------------+-----------------------------------------+
-; Resource                                    ; Usage                                   ;
-+---------------------------------------------+-----------------------------------------+
-; Estimated Total logic elements              ; 1                                       ;
-;                                             ;                                         ;
-; Total combinational functions               ; 1                                       ;
-; Logic element usage by number of LUT inputs ;                                         ;
-;     -- 4 input functions                    ; 0                                       ;
-;     -- 3 input functions                    ; 0                                       ;
-;     -- <=2 input functions                  ; 1                                       ;
-;                                             ;                                         ;
-; Logic elements by mode                      ;                                         ;
-;     -- normal mode                          ; 1                                       ;
-;     -- arithmetic mode                      ; 0                                       ;
-;                                             ;                                         ;
-; Total registers                             ; 1                                       ;
-;     -- Dedicated logic registers            ; 1                                       ;
-;     -- I/O registers                        ; 0                                       ;
-;                                             ;                                         ;
-; I/O pins                                    ; 6                                       ;
-; Embedded Multiplier 9-bit elements          ; 0                                       ;
-; Maximum fan-out node                        ; nbitreg:reg|enARdFF_2:\reg:0:biti|int_q ;
-; Maximum fan-out                             ; 2                                       ;
-; Total fan-out                               ; 12                                      ;
-; Average fan-out                             ; 0.86                                    ;
-+---------------------------------------------+-----------------------------------------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 81           ;
+;                                             ;              ;
+; Total combinational functions               ; 80           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 54           ;
+;     -- 3 input functions                    ; 20           ;
+;     -- <=2 input functions                  ; 6            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 80           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 37           ;
+;     -- Dedicated logic registers            ; 37           ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 26           ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+; Maximum fan-out node                        ; GClock~input ;
+; Maximum fan-out                             ; 37           ;
+; Total fan-out                               ; 464          ;
+; Average fan-out                             ; 2.75         ;
++---------------------------------------------+--------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Library Name ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
-; |threebitcounter              ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |threebitcounter                                   ; work         ;
-;    |nbitreg:reg|              ; 1 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |threebitcounter|nbitreg:reg                       ; work         ;
-;       |enARdFF_2:\reg:0:biti| ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |threebitcounter|nbitreg:reg|enARdFF_2:\reg:0:biti ; work         ;
-+-------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                              ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
+; |divider_top                                 ; 80 (0)            ; 37 (0)       ; 0           ; 0            ; 0       ; 0         ; 26   ; 0            ; |divider_top                                                                                           ; work         ;
+;    |divider_controlpath:cp|                  ; 14 (14)           ; 10 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp                                                                    ; work         ;
+;       |enARdFF_2:\states1to9:1:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:1:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:2:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:2:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:3:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:3:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:4:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:4:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:5:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:5:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:6:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:6:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:7:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:7:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:8:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:8:state_i                                    ; work         ;
+;       |enARdFF_2:\states1to9:9:state_i|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:9:state_i                                    ; work         ;
+;       |enARdFF_2:state0|                     ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_controlpath:cp|enARdFF_2:state0                                                   ; work         ;
+;    |divider_datapath:dp|                     ; 66 (0)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp                                                                       ; work         ;
+;       |nbit2to1mux:muxA|                     ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbit2to1mux:muxA                                                      ; work         ;
+;       |nbit2to1mux:muxop1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbit2to1mux:muxop1                                                    ; work         ;
+;       |nbit4to1mux:muxop2|                   ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbit4to1mux:muxop2                                                    ; work         ;
+;       |nbitaddersubtractor:adder_subtractor| ; 21 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor                                  ; work         ;
+;          |fulladder:FA0|                     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:FA0                    ; work         ;
+;          |fulladder:\addersubtractor:1:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:1:FAi ; work         ;
+;          |fulladder:\addersubtractor:2:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:2:FAi ; work         ;
+;          |fulladder:\addersubtractor:3:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:3:FAi ; work         ;
+;          |fulladder:\addersubtractor:4:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:4:FAi ; work         ;
+;          |fulladder:\addersubtractor:5:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:5:FAi ; work         ;
+;          |fulladder:\addersubtractor:6:FAi|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:6:FAi ; work         ;
+;          |fulladder:\addersubtractor:7:FAi|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:7:FAi ; work         ;
+;       |nbitreg:remainder_reg|                ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg                                                 ; work         ;
+;          |enARdFF_2:\reg:0:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:0:biti                           ; work         ;
+;          |enARdFF_2:\reg:1:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:1:biti                           ; work         ;
+;          |enARdFF_2:\reg:2:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:2:biti                           ; work         ;
+;          |enARdFF_2:\reg:3:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:3:biti                           ; work         ;
+;          |enARdFF_2:\reg:4:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:4:biti                           ; work         ;
+;          |enARdFF_2:\reg:5:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:5:biti                           ; work         ;
+;          |enARdFF_2:\reg:6:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:6:biti                           ; work         ;
+;          |enARdFF_2:\reg:7:biti|             ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:7:biti                           ; work         ;
+;       |nbitshiftreg:divisor_shiftreg|        ; 11 (0)            ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg                                         ; work         ;
+;          |enARdFF_2:\dffs:0:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:0:biti                  ; work         ;
+;          |enARdFF_2:\dffs:1:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:1:biti                  ; work         ;
+;          |enARdFF_2:\dffs:2:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:2:biti                  ; work         ;
+;          |enARdFF_2:\dffs:3:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:3:biti                  ; work         ;
+;          |enARdFF_2:\dffs:4:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:4:biti                  ; work         ;
+;          |enARdFF_2:\dffs:5:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:5:biti                  ; work         ;
+;          |enARdFF_2:\dffs:6:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:6:biti                  ; work         ;
+;          |enARdFF_2:\dffs:7:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:7:biti                  ; work         ;
+;          |onebit4to1mux:\muxes:1:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi             ; work         ;
+;          |onebit4to1mux:\muxes:2:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi             ; work         ;
+;          |onebit4to1mux:\muxes:3:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi             ; work         ;
+;          |onebit4to1mux:\muxes:4:muxi|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi             ; work         ;
+;          |onebit4to1mux:\muxes:5:muxi|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi             ; work         ;
+;          |onebit4to1mux:\muxes:6:muxi|       ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi             ; work         ;
+;          |onebit4to1mux:mux0|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0                      ; work         ;
+;          |onebit4to1mux:muxn_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1                    ; work         ;
+;       |nbitshiftreg:quotient_shiftreg|       ; 9 (1)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg                                        ; work         ;
+;          |enARdFF_2:\dffs:0:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:0:biti                 ; work         ;
+;          |enARdFF_2:\dffs:1:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:1:biti                 ; work         ;
+;          |enARdFF_2:\dffs:2:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:2:biti                 ; work         ;
+;          |enARdFF_2:\dffs:3:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:3:biti                 ; work         ;
+;          |enARdFF_2:\dffs:4:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:4:biti                 ; work         ;
+;          |enARdFF_2:\dffs:5:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:5:biti                 ; work         ;
+;          |enARdFF_2:\dffs:6:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:6:biti                 ; work         ;
+;          |enARdFF_2:\dffs:7:biti|            ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:7:biti                 ; work         ;
+;          |onebit4to1mux:\muxes:1:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:1:muxi            ; work         ;
+;          |onebit4to1mux:\muxes:2:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:2:muxi            ; work         ;
+;          |onebit4to1mux:\muxes:3:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:3:muxi            ; work         ;
+;          |onebit4to1mux:\muxes:4:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:4:muxi            ; work         ;
+;          |onebit4to1mux:\muxes:5:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:5:muxi            ; work         ;
+;          |onebit4to1mux:\muxes:6:muxi|       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:6:muxi            ; work         ;
+;          |onebit4to1mux:mux0|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:mux0                     ; work         ;
+;          |onebit4to1mux:muxn_1|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:muxn_1                   ; work         ;
+;       |threebitcounter:counter|              ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|threebitcounter:counter                                               ; work         ;
+;          |nbitreg:reg|                       ; 3 (0)             ; 3 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg                                   ; work         ;
+;             |enARdFF_2:\reg:0:biti|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:0:biti             ; work         ;
+;             |enARdFF_2:\reg:1:biti|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:1:biti             ; work         ;
+;             |enARdFF_2:\reg:2:biti|          ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:2:biti             ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                            ;
-+-----------------------------------------+-----------------------------------------------------+
-; Register name                           ; Reason for Removal                                  ;
-+-----------------------------------------+-----------------------------------------------------+
-; nbitreg:reg|enARdFF_2:\reg:2:biti|int_q ; Merged with nbitreg:reg|enARdFF_2:\reg:1:biti|int_q ;
-; nbitreg:reg|enARdFF_2:\reg:1:biti|int_q ; Stuck at GND due to stuck port data_in              ;
-; Total Number of Removed Registers = 2   ;                                                     ;
-+-----------------------------------------+-----------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -238,28 +354,380 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 37    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Clear ; 36    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: nbitreg:reg ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; n              ; 3     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:3:biti|int_q ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:4:biti|int_q ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |divider_top|divider_datapath:dp|nbit4to1mux:muxop2|o[7]                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxA ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitreg:remainder_reg ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxB ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0 ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1 ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbit2to1mux:muxop1 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbit4to1mux:muxop2 ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitaddersubtractor:adder_subtractor ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:mux0 ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:muxn_1 ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:6:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:5:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:4:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:3:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:2:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:1:muxi ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider_datapath:dp|threebitcounter:counter|nbitreg:reg ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:9:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:8:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:7:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:6:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:5:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:4:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:3:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:2:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:\states1to9:1:state_i"                                 ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i_enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_controlpath:cp|enARdFF_2:state0"                                                  ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; i_resetbar ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; i_enable   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_qbar     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "nbitreg:reg"                                                                          ;
+; Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|nbitreg:reg"                              ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -267,17 +735,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "threeBitAdder:adder|oneBitAdder:add2" ;
-+-----------+-------+----------+-----------------------------------+
-; Port      ; Type  ; Severity ; Details                           ;
-+-----------+-------+----------+-----------------------------------+
-; i_carryin ; Input ; Info     ; Stuck at GND                      ;
-+-----------+-------+----------+-----------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add0" ;
++-----------+-------+----------+-------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                       ;
++-----------+-------+----------+-------------------------------------------------------------------------------+
+; i_carryin ; Input ; Info     ; Stuck at GND                                                                  ;
++-----------+-------+----------+-------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "threeBitAdder:adder"                                                                      ;
+; Port Connectivity Checks: "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder"                          ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port       ; Type   ; Severity ; Details                                                                             ;
 +------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -287,12 +755,142 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:quotient_shiftreg"                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; shiftr ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dout_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbit2to1mux:muxop1" ;
++------+-------+----------+------------------------------------------+
+; Port ; Type  ; Severity ; Details                                  ;
++------+-------+----------+------------------------------------------+
+; i_1  ; Input ; Info     ; Stuck at GND                             ;
++------+-------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi" ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                         ;
++------+-------+----------+---------------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                                    ;
++------+-------+----------+---------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1" ;
++------+-------+----------+--------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                  ;
++------+-------+----------+--------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                             ;
++------+-------+----------+--------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0" ;
++------+-------+----------+------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                ;
++------+-------+----------+------------------------------------------------------------------------+
+; i_3  ; Input ; Info     ; Stuck at GND                                                           ;
++------+-------+----------+------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitshiftreg:divisor_shiftreg"                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; shift_in ; Input  ; Info     ; Stuck at GND                                                                        ;
+; shiftl   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dout_b   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbit2to1mux:muxB" ;
++-----------+-------+----------+-----------------------------------+
+; Port      ; Type  ; Severity ; Details                           ;
++-----------+-------+----------+-----------------------------------+
+; i_1[3..0] ; Input ; Info     ; Stuck at GND                      ;
++-----------+-------+----------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp|nbitreg:remainder_reg"                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; dout_b ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divider_datapath:dp"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; v    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -302,24 +900,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Oct 18 01:07:18 2024
+    Info: Processing started: Sat Oct 19 22:28:47 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab2 -c lab2
 Info (11104): Parallel Compilation has detected 20 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 14 of the 14 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file divider_datapath.vhd
+    Info (12022): Found design unit 1: divider_datapath-struc
+    Info (12023): Found entity 1: divider_datapath
 Info (12021): Found 2 design units, including 1 entities, in source file onebit4to1mux.vhd
     Info (12022): Found design unit 1: onebit4to1mux-behav
     Info (12023): Found entity 1: onebit4to1mux
 Info (12021): Found 2 design units, including 1 entities, in source file enardff_2.vhd
     Info (12022): Found design unit 1: enARdFF_2-rtl
     Info (12023): Found entity 1: enARdFF_2
-Info (12021): Found 0 design units, including 0 entities, in source file fourbitreg.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file nbitreg.vhd
     Info (12022): Found design unit 1: nbitreg-struc
     Info (12023): Found entity 1: nbitreg
-Info (12021): Found 0 design units, including 0 entities, in source file nbit2scomp.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file nbitshiftreg.vhd
     Info (12022): Found design unit 1: nbitshiftreg-struc
     Info (12023): Found entity 1: nbitshiftreg
-Info (12021): Found 0 design units, including 0 entities, in source file divisor.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file nbit2to1mux.vhd
     Info (12022): Found design unit 1: nbit2to1mux-behav
     Info (12023): Found entity 1: nbit2to1mux
@@ -332,24 +930,48 @@ Info (12021): Found 2 design units, including 1 entities, in source file threebi
 Info (12021): Found 2 design units, including 1 entities, in source file onebitadder.vhd
     Info (12022): Found design unit 1: oneBitAdder-rtl
     Info (12023): Found entity 1: oneBitAdder
-Info (12127): Elaborating entity "threebitcounter" for the top level hierarchy
-Info (12128): Elaborating entity "threeBitAdder" for hierarchy "threeBitAdder:adder"
-Info (12128): Elaborating entity "oneBitAdder" for hierarchy "threeBitAdder:adder|oneBitAdder:add2"
-Info (12128): Elaborating entity "nbitreg" for hierarchy "nbitreg:reg"
-Info (12128): Elaborating entity "enARdFF_2" for hierarchy "nbitreg:reg|enARdFF_2:\reg:2:biti"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "count[1]" is stuck at GND
-    Warning (13410): Pin "count[2]" is stuck at GND
+Info (12021): Found 2 design units, including 1 entities, in source file nbit4to1mux.vhd
+    Info (12022): Found design unit 1: nbit4to1mux-behav
+    Info (12023): Found entity 1: nbit4to1mux
+Info (12021): Found 2 design units, including 1 entities, in source file nbitaddersubtractor.vhd
+    Info (12022): Found design unit 1: nbitaddersubtractor-struc
+    Info (12023): Found entity 1: nbitaddersubtractor
+Info (12021): Found 2 design units, including 1 entities, in source file fulladder.vhd
+    Info (12022): Found design unit 1: fulladder-behav
+    Info (12023): Found entity 1: fulladder
+Info (12021): Found 2 design units, including 1 entities, in source file divider_controlpath.vhd
+    Info (12022): Found design unit 1: divider_controlpath-struc
+    Info (12023): Found entity 1: divider_controlpath
+Info (12021): Found 2 design units, including 1 entities, in source file divider_top.vhd
+    Info (12022): Found design unit 1: divider_top-struc
+    Info (12023): Found entity 1: divider_top
+Info (12127): Elaborating entity "divider_top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at divider_top.vhd(16): object "int_z" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at divider_top.vhd(16): object "int_v" assigned a value but never read
+Info (12128): Elaborating entity "divider_datapath" for hierarchy "divider_datapath:dp"
+Info (12128): Elaborating entity "nbit2to1mux" for hierarchy "divider_datapath:dp|nbit2to1mux:muxA"
+Info (12128): Elaborating entity "nbitreg" for hierarchy "divider_datapath:dp|nbitreg:remainder_reg"
+Info (12128): Elaborating entity "enARdFF_2" for hierarchy "divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:7:biti"
+Info (12128): Elaborating entity "nbitshiftreg" for hierarchy "divider_datapath:dp|nbitshiftreg:divisor_shiftreg"
+Info (12128): Elaborating entity "onebit4to1mux" for hierarchy "divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0"
+Info (12128): Elaborating entity "nbit4to1mux" for hierarchy "divider_datapath:dp|nbit4to1mux:muxop2"
+Info (12128): Elaborating entity "nbitaddersubtractor" for hierarchy "divider_datapath:dp|nbitaddersubtractor:adder_subtractor"
+Info (12128): Elaborating entity "fulladder" for hierarchy "divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:FA0"
+Info (12128): Elaborating entity "threebitcounter" for hierarchy "divider_datapath:dp|threebitcounter:counter"
+Info (12128): Elaborating entity "threeBitAdder" for hierarchy "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder"
+Info (12128): Elaborating entity "oneBitAdder" for hierarchy "divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add2"
+Info (12128): Elaborating entity "nbitreg" for hierarchy "divider_datapath:dp|threebitcounter:counter|nbitreg:reg"
+Info (12128): Elaborating entity "divider_controlpath" for hierarchy "divider_controlpath:cp"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4692 megabytes
-    Info: Processing ended: Fri Oct 18 01:07:21 2024
+Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 81 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4704 megabytes
+    Info: Processing ended: Sat Oct 19 22:28:50 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 

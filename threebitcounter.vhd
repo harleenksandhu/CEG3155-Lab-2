@@ -10,6 +10,7 @@ architecture struc of threebitcounter is
 --intermediate signals
 signal adder_out : std_logic_vector(2 downto 0);
 signal int_count: std_logic_Vector(2 downto 0);
+signal greset_b : std_logic;
 
 component nbitreg
 	generic(n: integer);
@@ -32,13 +33,15 @@ begin
         o_CarryOut => open,
         o_Sum => adder_out);
     
-	 reg: nbitreg
+	reg: nbitreg
     generic map(n => 3)
-    port map(reset_b => not(greset), 
+    port map(reset_b => greset_b, 
          din => adder_out,
          load => inc_i, 
          clk => clk,
          dout => int_count);
+
+greset_b <= not(greset);
 count <= int_count;
 
 end struc;

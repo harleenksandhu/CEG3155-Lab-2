@@ -10,8 +10,8 @@ END onebit4to1mux;
 
 ARCHITECTURE behav of onebit4to1mux IS
 	BEGIN
-	o <= i_0 when sel1 = '0' AND sel2 = '0' else
-		 i_1 when sel1 = '0' AND sel2 = '1' else
-		 i_2 when sel1 = '1' AND sel2 = '0' else
+	o <= i_0 when sel2 = '0' AND sel1 = '0' else
+		 i_1 when sel2 = '0' AND sel1 = '1' else
+		 i_2 when sel2 = '1' AND sel1 = '0' else
 		 i_3;
 END behav;

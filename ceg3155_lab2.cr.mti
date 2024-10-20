@@ -1,0 +1,113 @@
+{C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitshiftreg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitshiftreg.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbitshiftreg
+-- Compiling architecture struc of nbitshiftreg
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity oneBitAdder
+-- Compiling architecture rtl of oneBitAdder
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_datapath.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_datapath.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity divider_datapath
+-- Compiling architecture struc of divider_datapath
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit2to1mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit2to1mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbit2to1mux
+-- Compiling architecture behav of nbit2to1mux
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit4to1mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit4to1mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbit4to1mux
+-- Compiling architecture behav of nbit4to1mux
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity threebitcounter
+-- Compiling architecture struc of threebitcounter
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity enARdFF_2
+-- Compiling architecture rtl of enARdFF_2
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity divider_top
+-- Compiling architecture struc of divider_top
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebit4to1mux.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebit4to1mux.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity onebit4to1mux
+-- Compiling architecture behav of onebit4to1mux
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbitreg
+-- Compiling architecture struc of nbitreg
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/fulladder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/fulladder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity fulladder
+-- Compiling architecture behav of fulladder
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_controlpath.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_controlpath.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity divider_controlpath
+-- Compiling architecture struc of divider_controlpath
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity nbitaddersubtractor
+-- Compiling architecture struc of nbitaddersubtractor
+
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity threeBitAdder
+-- Compiling architecture rtl of threeBitAdder
+
+} {} {}}

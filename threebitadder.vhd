@@ -21,25 +21,23 @@ ARCHITECTURE rtl OF threeBitAdder IS
 
 BEGIN
 
-	-- Concurrent Signal Assignment
-	gnd <= '0';
 
 add2: oneBitAdder
-	PORT MAP (i_CarryIn => gnd, 
+	PORT MAP (i_CarryIn => int_CarryOut(1), 
 			  i_Ai => i_Ai(2),
 			  i_Bi => i_Bi(2),
 			  o_Sum => int_Sum(2),
 			  o_CarryOut => int_CarryOut(2));
 
 add1: oneBitAdder
-	PORT MAP (i_CarryIn => int_CarryOut(2), 
+	PORT MAP (i_CarryIn => int_CarryOut(0), 
 			  i_Ai => i_Ai(1),
 			  i_Bi => i_Bi(1),
 			  o_Sum => int_Sum(1),
 			  o_CarryOut => int_CarryOut(1));
 
 add0: oneBitAdder
-	PORT MAP (i_CarryIn => int_CarryOut(1), 
+	PORT MAP (i_CarryIn => '0', 
 			  i_Ai => i_Ai(0),
 			  i_Bi => i_Bi(0),
 			  o_Sum => int_Sum(0),
@@ -47,6 +45,6 @@ add0: oneBitAdder
 
 	-- Output Driver
 	o_Sum <= int_Sum;
-	o_CarryOut <= int_CarryOut(0);
+	o_CarryOut <= int_CarryOut(2);
 
 END rtl;

@@ -1,4 +1,1034 @@
-|threebitcounter
+|divider_top
+GClock => divider_datapath:dp.GClock
+GClock => divider_controlpath:cp.GClock
+GReset => divider_datapath:dp.GReset
+GReset => divider_controlpath:cp.reset
+OperandA[0] => divider_datapath:dp.INA[0]
+OperandA[1] => divider_datapath:dp.INA[1]
+OperandA[2] => divider_datapath:dp.INA[2]
+OperandA[3] => divider_datapath:dp.INA[3]
+OperandB[0] => divider_datapath:dp.INB[0]
+OperandB[1] => divider_datapath:dp.INB[1]
+OperandB[2] => divider_datapath:dp.INB[2]
+OperandB[3] => divider_datapath:dp.INB[3]
+QuotientOut[0] << divider_datapath:dp.Q_out[0]
+QuotientOut[1] << divider_datapath:dp.Q_out[1]
+QuotientOut[2] << divider_datapath:dp.Q_out[2]
+QuotientOut[3] << divider_datapath:dp.Q_out[3]
+QuotientOut[4] << divider_datapath:dp.Q_out[4]
+QuotientOut[5] << divider_datapath:dp.Q_out[5]
+QuotientOut[6] << divider_datapath:dp.Q_out[6]
+QuotientOut[7] << divider_datapath:dp.Q_out[7]
+RemainderOut[0] << divider_datapath:dp.rmd_out[0]
+RemainderOut[1] << divider_datapath:dp.rmd_out[1]
+RemainderOut[2] << divider_datapath:dp.rmd_out[2]
+RemainderOut[3] << divider_datapath:dp.rmd_out[3]
+RemainderOut[4] << divider_datapath:dp.rmd_out[4]
+RemainderOut[5] << divider_datapath:dp.rmd_out[5]
+RemainderOut[6] << divider_datapath:dp.rmd_out[6]
+RemainderOut[7] << divider_datapath:dp.rmd_out[7]
+
+
+|divider_top|divider_datapath:dp
+INA[0] => nbit2to1mux:muxA.i_1[0]
+INA[0] => nbit4to1mux:muxop2.i_3[0]
+INA[1] => nbit2to1mux:muxA.i_1[1]
+INA[1] => nbit4to1mux:muxop2.i_3[1]
+INA[2] => nbit2to1mux:muxA.i_1[2]
+INA[2] => nbit4to1mux:muxop2.i_3[2]
+INA[3] => AxorB.IN0
+INA[3] => nbit2to1mux:muxA.i_1[7]
+INA[3] => nbit2to1mux:muxA.i_1[6]
+INA[3] => nbit2to1mux:muxA.i_1[5]
+INA[3] => nbit2to1mux:muxA.i_1[4]
+INA[3] => nbit2to1mux:muxA.i_1[3]
+INA[3] => nbit4to1mux:muxop2.i_3[7]
+INA[3] => nbit4to1mux:muxop2.i_3[6]
+INA[3] => nbit4to1mux:muxop2.i_3[5]
+INA[3] => nbit4to1mux:muxop2.i_3[4]
+INA[3] => nbit4to1mux:muxop2.i_3[3]
+INA[3] => A_3.DATAIN
+INB[0] => nbit2to1mux:muxB.i_1[4]
+INB[1] => nbit2to1mux:muxB.i_1[5]
+INB[2] => nbit2to1mux:muxB.i_1[6]
+INB[3] => AxorB.IN1
+INB[3] => nbit2to1mux:muxB.i_1[7]
+INB[3] => B_3.DATAIN
+GReset => threebitcounter:counter.greset
+GReset => nbitreg:remainder_reg.reset_b
+GReset => nbitshiftreg:divisor_shiftreg.reset_b
+GReset => nbitshiftreg:quotient_shiftreg.reset_b
+GClock => nbitreg:remainder_reg.clk
+GClock => nbitshiftreg:divisor_shiftreg.clk
+GClock => nbitshiftreg:quotient_shiftreg.clk
+GClock => threebitcounter:counter.clk
+loadR => nbitreg:remainder_reg.load
+loadD => nbitshiftreg:divisor_shiftreg.load
+loadQ => nbitshiftreg:quotient_shiftreg.load
+loadQ => nbitshiftreg:quotient_shiftreg.shift_in
+selA => nbit2to1mux:muxA.sel1
+selB => nbit2to1mux:muxB.sel1
+selop1 => nbit2to1mux:muxop1.sel1
+selop2_0 => nbit4to1mux:muxop2.sel1
+selop2_1 => nbit4to1mux:muxop2.sel2
+sub => nbitaddersubtractor:adder_subtractor.cin
+incI => threebitcounter:counter.inc_i
+shiftD => nbitshiftreg:divisor_shiftreg.shiftr
+shiftQ => nbitshiftreg:quotient_shiftreg.shiftl
+A_3 <= INA[3].DB_MAX_OUTPUT_PORT_TYPE
+B_3 <= INB[3].DB_MAX_OUTPUT_PORT_TYPE
+AxorB <= AxorB.DB_MAX_OUTPUT_PORT_TYPE
+rltz <= nbitaddersubtractor:adder_subtractor.sum[7]
+incEq5 <= incEq5.DB_MAX_OUTPUT_PORT_TYPE
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+v <= nbitaddersubtractor:adder_subtractor.cout
+rmd_out[0] <= nbitreg:remainder_reg.dout[0]
+rmd_out[1] <= nbitreg:remainder_reg.dout[1]
+rmd_out[2] <= nbitreg:remainder_reg.dout[2]
+rmd_out[3] <= nbitreg:remainder_reg.dout[3]
+rmd_out[4] <= nbitreg:remainder_reg.dout[4]
+rmd_out[5] <= nbitreg:remainder_reg.dout[5]
+rmd_out[6] <= nbitreg:remainder_reg.dout[6]
+rmd_out[7] <= nbitreg:remainder_reg.dout[7]
+Q_out[0] <= nbitshiftreg:quotient_shiftreg.d_out[0]
+Q_out[1] <= nbitshiftreg:quotient_shiftreg.d_out[1]
+Q_out[2] <= nbitshiftreg:quotient_shiftreg.d_out[2]
+Q_out[3] <= nbitshiftreg:quotient_shiftreg.d_out[3]
+Q_out[4] <= nbitshiftreg:quotient_shiftreg.d_out[4]
+Q_out[5] <= nbitshiftreg:quotient_shiftreg.d_out[5]
+Q_out[6] <= nbitshiftreg:quotient_shiftreg.d_out[6]
+Q_out[7] <= nbitshiftreg:quotient_shiftreg.d_out[7]
+
+
+|divider_top|divider_datapath:dp|nbit2to1mux:muxA
+i_0[0] => o.DATAB
+i_0[1] => o.DATAB
+i_0[2] => o.DATAB
+i_0[3] => o.DATAB
+i_0[4] => o.DATAB
+i_0[5] => o.DATAB
+i_0[6] => o.DATAB
+i_0[7] => o.DATAB
+i_1[0] => o.DATAA
+i_1[1] => o.DATAA
+i_1[2] => o.DATAA
+i_1[3] => o.DATAA
+i_1[4] => o.DATAA
+i_1[5] => o.DATAA
+i_1[6] => o.DATAA
+i_1[7] => o.DATAA
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg
+reset_b => enARdFF_2:reg:7:biti.i_resetBar
+reset_b => enARdFF_2:reg:6:biti.i_resetBar
+reset_b => enARdFF_2:reg:5:biti.i_resetBar
+reset_b => enARdFF_2:reg:4:biti.i_resetBar
+reset_b => enARdFF_2:reg:3:biti.i_resetBar
+reset_b => enARdFF_2:reg:2:biti.i_resetBar
+reset_b => enARdFF_2:reg:1:biti.i_resetBar
+reset_b => enARdFF_2:reg:0:biti.i_resetBar
+din[0] => enARdFF_2:reg:0:biti.i_d
+din[1] => enARdFF_2:reg:1:biti.i_d
+din[2] => enARdFF_2:reg:2:biti.i_d
+din[3] => enARdFF_2:reg:3:biti.i_d
+din[4] => enARdFF_2:reg:4:biti.i_d
+din[5] => enARdFF_2:reg:5:biti.i_d
+din[6] => enARdFF_2:reg:6:biti.i_d
+din[7] => enARdFF_2:reg:7:biti.i_d
+load => enARdFF_2:reg:7:biti.i_enable
+load => enARdFF_2:reg:6:biti.i_enable
+load => enARdFF_2:reg:5:biti.i_enable
+load => enARdFF_2:reg:4:biti.i_enable
+load => enARdFF_2:reg:3:biti.i_enable
+load => enARdFF_2:reg:2:biti.i_enable
+load => enARdFF_2:reg:1:biti.i_enable
+load => enARdFF_2:reg:0:biti.i_enable
+clk => enARdFF_2:reg:7:biti.i_clock
+clk => enARdFF_2:reg:6:biti.i_clock
+clk => enARdFF_2:reg:5:biti.i_clock
+clk => enARdFF_2:reg:4:biti.i_clock
+clk => enARdFF_2:reg:3:biti.i_clock
+clk => enARdFF_2:reg:2:biti.i_clock
+clk => enARdFF_2:reg:1:biti.i_clock
+clk => enARdFF_2:reg:0:biti.i_clock
+dout[0] <= enARdFF_2:reg:0:biti.o_q
+dout[1] <= enARdFF_2:reg:1:biti.o_q
+dout[2] <= enARdFF_2:reg:2:biti.o_q
+dout[3] <= enARdFF_2:reg:3:biti.o_q
+dout[4] <= enARdFF_2:reg:4:biti.o_q
+dout[5] <= enARdFF_2:reg:5:biti.o_q
+dout[6] <= enARdFF_2:reg:6:biti.o_q
+dout[7] <= enARdFF_2:reg:7:biti.o_q
+dout_b[0] <= enARdFF_2:reg:0:biti.o_qBar
+dout_b[1] <= enARdFF_2:reg:1:biti.o_qBar
+dout_b[2] <= enARdFF_2:reg:2:biti.o_qBar
+dout_b[3] <= enARdFF_2:reg:3:biti.o_qBar
+dout_b[4] <= enARdFF_2:reg:4:biti.o_qBar
+dout_b[5] <= enARdFF_2:reg:5:biti.o_qBar
+dout_b[6] <= enARdFF_2:reg:6:biti.o_qBar
+dout_b[7] <= enARdFF_2:reg:7:biti.o_qBar
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:7:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:6:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:5:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:4:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:3:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:2:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:1:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitreg:remainder_reg|enARdFF_2:\reg:0:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbit2to1mux:muxB
+i_0[0] => o.DATAB
+i_0[1] => o.DATAB
+i_0[2] => o.DATAB
+i_0[3] => o.DATAB
+i_0[4] => o.DATAB
+i_0[5] => o.DATAB
+i_0[6] => o.DATAB
+i_0[7] => o.DATAB
+i_1[0] => o.DATAA
+i_1[1] => o.DATAA
+i_1[2] => o.DATAA
+i_1[3] => o.DATAA
+i_1[4] => o.DATAA
+i_1[5] => o.DATAA
+i_1[6] => o.DATAA
+i_1[7] => o.DATAA
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg
+d_in[0] => onebit4to1mux:mux0.i_0
+d_in[1] => onebit4to1mux:muxes:1:muxi.i_0
+d_in[2] => onebit4to1mux:muxes:2:muxi.i_0
+d_in[3] => onebit4to1mux:muxes:3:muxi.i_0
+d_in[4] => onebit4to1mux:muxes:4:muxi.i_0
+d_in[5] => onebit4to1mux:muxes:5:muxi.i_0
+d_in[6] => onebit4to1mux:muxes:6:muxi.i_0
+d_in[7] => onebit4to1mux:muxn_1.i_0
+shift_in => onebit4to1mux:mux0.i_1
+shift_in => onebit4to1mux:muxn_1.i_2
+clk => enardFF_2:dffs:7:biti.i_clock
+clk => enardFF_2:dffs:6:biti.i_clock
+clk => enardFF_2:dffs:5:biti.i_clock
+clk => enardFF_2:dffs:4:biti.i_clock
+clk => enardFF_2:dffs:3:biti.i_clock
+clk => enardFF_2:dffs:2:biti.i_clock
+clk => enardFF_2:dffs:1:biti.i_clock
+clk => enardFF_2:dffs:0:biti.i_clock
+load => int_en.IN1
+shiftl => int_en.IN0
+shiftl => onebit4to1mux:mux0.sel1
+shiftl => onebit4to1mux:muxn_1.sel1
+shiftl => onebit4to1mux:muxes:6:muxi.sel1
+shiftl => onebit4to1mux:muxes:5:muxi.sel1
+shiftl => onebit4to1mux:muxes:4:muxi.sel1
+shiftl => onebit4to1mux:muxes:3:muxi.sel1
+shiftl => onebit4to1mux:muxes:2:muxi.sel1
+shiftl => onebit4to1mux:muxes:1:muxi.sel1
+shiftr => int_en.IN1
+shiftr => onebit4to1mux:mux0.sel2
+shiftr => onebit4to1mux:muxn_1.sel2
+shiftr => onebit4to1mux:muxes:6:muxi.sel2
+shiftr => onebit4to1mux:muxes:5:muxi.sel2
+shiftr => onebit4to1mux:muxes:4:muxi.sel2
+shiftr => onebit4to1mux:muxes:3:muxi.sel2
+shiftr => onebit4to1mux:muxes:2:muxi.sel2
+shiftr => onebit4to1mux:muxes:1:muxi.sel2
+reset_b => enardFF_2:dffs:7:biti.i_resetBar
+reset_b => enardFF_2:dffs:6:biti.i_resetBar
+reset_b => enardFF_2:dffs:5:biti.i_resetBar
+reset_b => enardFF_2:dffs:4:biti.i_resetBar
+reset_b => enardFF_2:dffs:3:biti.i_resetBar
+reset_b => enardFF_2:dffs:2:biti.i_resetBar
+reset_b => enardFF_2:dffs:1:biti.i_resetBar
+reset_b => enardFF_2:dffs:0:biti.i_resetBar
+d_out[0] <= enardFF_2:dffs:0:biti.o_q
+d_out[1] <= enardFF_2:dffs:1:biti.o_q
+d_out[2] <= enardFF_2:dffs:2:biti.o_q
+d_out[3] <= enardFF_2:dffs:3:biti.o_q
+d_out[4] <= enardFF_2:dffs:4:biti.o_q
+d_out[5] <= enardFF_2:dffs:5:biti.o_q
+d_out[6] <= enardFF_2:dffs:6:biti.o_q
+d_out[7] <= enardFF_2:dffs:7:biti.o_q
+dout_b[0] <= enardFF_2:dffs:0:biti.o_qBar
+dout_b[1] <= enardFF_2:dffs:1:biti.o_qBar
+dout_b[2] <= enardFF_2:dffs:2:biti.o_qBar
+dout_b[3] <= enardFF_2:dffs:3:biti.o_qBar
+dout_b[4] <= enardFF_2:dffs:4:biti.o_qBar
+dout_b[5] <= enardFF_2:dffs:5:biti.o_qBar
+dout_b[6] <= enardFF_2:dffs:6:biti.o_qBar
+dout_b[7] <= enardFF_2:dffs:7:biti.o_qBar
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:mux0
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:muxn_1
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:6:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:5:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:4:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:3:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:2:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|onebit4to1mux:\muxes:1:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:7:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:6:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:5:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:4:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:3:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:2:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:1:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:divisor_shiftreg|enARdFF_2:\dffs:0:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbit2to1mux:muxop1
+i_0[0] => o.DATAB
+i_0[1] => o.DATAB
+i_0[2] => o.DATAB
+i_0[3] => o.DATAB
+i_0[4] => o.DATAB
+i_0[5] => o.DATAB
+i_0[6] => o.DATAB
+i_0[7] => o.DATAB
+i_1[0] => o.DATAA
+i_1[1] => o.DATAA
+i_1[2] => o.DATAA
+i_1[3] => o.DATAA
+i_1[4] => o.DATAA
+i_1[5] => o.DATAA
+i_1[6] => o.DATAA
+i_1[7] => o.DATAA
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbit4to1mux:muxop2
+i_0[0] => o.DATAB
+i_0[1] => o.DATAB
+i_0[2] => o.DATAB
+i_0[3] => o.DATAB
+i_0[4] => o.DATAB
+i_0[5] => o.DATAB
+i_0[6] => o.DATAB
+i_0[7] => o.DATAB
+i_1[0] => o.DATAB
+i_1[1] => o.DATAB
+i_1[2] => o.DATAB
+i_1[3] => o.DATAB
+i_1[4] => o.DATAB
+i_1[5] => o.DATAB
+i_1[6] => o.DATAB
+i_1[7] => o.DATAB
+i_2[0] => o.DATAB
+i_2[1] => o.DATAB
+i_2[2] => o.DATAB
+i_2[3] => o.DATAB
+i_2[4] => o.DATAB
+i_2[5] => o.DATAB
+i_2[6] => o.DATAB
+i_2[7] => o.DATAB
+i_3[0] => o.DATAA
+i_3[1] => o.DATAA
+i_3[2] => o.DATAA
+i_3[3] => o.DATAA
+i_3[4] => o.DATAA
+i_3[5] => o.DATAA
+i_3[6] => o.DATAA
+i_3[7] => o.DATAA
+sel1 => o.IN0
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.OUTPUTSELECT
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor
+x[0] => fulladder:FA0.x
+x[1] => fulladder:addersubtractor:1:FAi.x
+x[2] => fulladder:addersubtractor:2:FAi.x
+x[3] => fulladder:addersubtractor:3:FAi.x
+x[4] => fulladder:addersubtractor:4:FAi.x
+x[5] => fulladder:addersubtractor:5:FAi.x
+x[6] => fulladder:addersubtractor:6:FAi.x
+x[7] => fulladder:addersubtractor:7:FAi.x
+y[0] => yxor[0].IN0
+y[1] => yxor[1].IN0
+y[2] => yxor[2].IN0
+y[3] => yxor[3].IN0
+y[4] => yxor[4].IN0
+y[5] => yxor[5].IN0
+y[6] => yxor[6].IN0
+y[7] => yxor[7].IN0
+cin => fulladder:FA0.cin
+cin => yxor[7].IN1
+cin => yxor[6].IN1
+cin => yxor[5].IN1
+cin => yxor[4].IN1
+cin => yxor[3].IN1
+cin => yxor[2].IN1
+cin => yxor[1].IN1
+cin => yxor[0].IN1
+sum[0] <= fulladder:FA0.sum
+sum[1] <= fulladder:addersubtractor:1:FAi.sum
+sum[2] <= fulladder:addersubtractor:2:FAi.sum
+sum[3] <= fulladder:addersubtractor:3:FAi.sum
+sum[4] <= fulladder:addersubtractor:4:FAi.sum
+sum[5] <= fulladder:addersubtractor:5:FAi.sum
+sum[6] <= fulladder:addersubtractor:6:FAi.sum
+sum[7] <= fulladder:addersubtractor:7:FAi.sum
+cout <= fulladder:addersubtractor:7:FAi.cout
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:FA0
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:1:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:2:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:3:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:4:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:5:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:6:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitaddersubtractor:adder_subtractor|fulladder:\addersubtractor:7:FAi
+x => sum.IN0
+x => cout.IN0
+x => cout.IN0
+y => sum.IN1
+y => cout.IN1
+y => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg
+d_in[0] => onebit4to1mux:mux0.i_0
+d_in[1] => onebit4to1mux:muxes:1:muxi.i_0
+d_in[2] => onebit4to1mux:muxes:2:muxi.i_0
+d_in[3] => onebit4to1mux:muxes:3:muxi.i_0
+d_in[4] => onebit4to1mux:muxes:4:muxi.i_0
+d_in[5] => onebit4to1mux:muxes:5:muxi.i_0
+d_in[6] => onebit4to1mux:muxes:6:muxi.i_0
+d_in[7] => onebit4to1mux:muxn_1.i_0
+shift_in => onebit4to1mux:mux0.i_1
+shift_in => onebit4to1mux:muxn_1.i_2
+clk => enardFF_2:dffs:7:biti.i_clock
+clk => enardFF_2:dffs:6:biti.i_clock
+clk => enardFF_2:dffs:5:biti.i_clock
+clk => enardFF_2:dffs:4:biti.i_clock
+clk => enardFF_2:dffs:3:biti.i_clock
+clk => enardFF_2:dffs:2:biti.i_clock
+clk => enardFF_2:dffs:1:biti.i_clock
+clk => enardFF_2:dffs:0:biti.i_clock
+load => int_en.IN1
+shiftl => int_en.IN0
+shiftl => onebit4to1mux:mux0.sel1
+shiftl => onebit4to1mux:muxn_1.sel1
+shiftl => onebit4to1mux:muxes:6:muxi.sel1
+shiftl => onebit4to1mux:muxes:5:muxi.sel1
+shiftl => onebit4to1mux:muxes:4:muxi.sel1
+shiftl => onebit4to1mux:muxes:3:muxi.sel1
+shiftl => onebit4to1mux:muxes:2:muxi.sel1
+shiftl => onebit4to1mux:muxes:1:muxi.sel1
+shiftr => int_en.IN1
+shiftr => onebit4to1mux:mux0.sel2
+shiftr => onebit4to1mux:muxn_1.sel2
+shiftr => onebit4to1mux:muxes:6:muxi.sel2
+shiftr => onebit4to1mux:muxes:5:muxi.sel2
+shiftr => onebit4to1mux:muxes:4:muxi.sel2
+shiftr => onebit4to1mux:muxes:3:muxi.sel2
+shiftr => onebit4to1mux:muxes:2:muxi.sel2
+shiftr => onebit4to1mux:muxes:1:muxi.sel2
+reset_b => enardFF_2:dffs:7:biti.i_resetBar
+reset_b => enardFF_2:dffs:6:biti.i_resetBar
+reset_b => enardFF_2:dffs:5:biti.i_resetBar
+reset_b => enardFF_2:dffs:4:biti.i_resetBar
+reset_b => enardFF_2:dffs:3:biti.i_resetBar
+reset_b => enardFF_2:dffs:2:biti.i_resetBar
+reset_b => enardFF_2:dffs:1:biti.i_resetBar
+reset_b => enardFF_2:dffs:0:biti.i_resetBar
+d_out[0] <= enardFF_2:dffs:0:biti.o_q
+d_out[1] <= enardFF_2:dffs:1:biti.o_q
+d_out[2] <= enardFF_2:dffs:2:biti.o_q
+d_out[3] <= enardFF_2:dffs:3:biti.o_q
+d_out[4] <= enardFF_2:dffs:4:biti.o_q
+d_out[5] <= enardFF_2:dffs:5:biti.o_q
+d_out[6] <= enardFF_2:dffs:6:biti.o_q
+d_out[7] <= enardFF_2:dffs:7:biti.o_q
+dout_b[0] <= enardFF_2:dffs:0:biti.o_qBar
+dout_b[1] <= enardFF_2:dffs:1:biti.o_qBar
+dout_b[2] <= enardFF_2:dffs:2:biti.o_qBar
+dout_b[3] <= enardFF_2:dffs:3:biti.o_qBar
+dout_b[4] <= enardFF_2:dffs:4:biti.o_qBar
+dout_b[5] <= enardFF_2:dffs:5:biti.o_qBar
+dout_b[6] <= enardFF_2:dffs:6:biti.o_qBar
+dout_b[7] <= enardFF_2:dffs:7:biti.o_qBar
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:mux0
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:muxn_1
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:6:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:5:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:4:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:3:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:2:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|onebit4to1mux:\muxes:1:muxi
+i_0 => o.DATAB
+i_1 => o.DATAB
+i_2 => o.DATAB
+i_3 => o.DATAA
+sel1 => o.IN0
+sel1 => o.IN0
+sel1 => o.IN0
+sel2 => o.IN1
+sel2 => o.IN1
+sel2 => o.IN1
+o <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:7:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:6:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:5:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:4:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:3:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:2:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:1:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|nbitshiftreg:quotient_shiftreg|enARdFF_2:\dffs:0:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_datapath:dp|threebitcounter:counter
 inc_i => nbitreg:reg.load
 greset => nbitreg:reg.reset_b
 clk => nbitreg:reg.clk
@@ -7,20 +1037,20 @@ count[1] <= nbitreg:reg.dout[1]
 count[2] <= nbitreg:reg.dout[2]
 
 
-|threebitcounter|threeBitAdder:adder
+|divider_top|divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder
 i_Ai[0] => oneBitAdder:add0.i_Ai
 i_Ai[1] => oneBitAdder:add1.i_Ai
 i_Ai[2] => oneBitAdder:add2.i_Ai
 i_Bi[0] => oneBitAdder:add0.i_Bi
 i_Bi[1] => oneBitAdder:add1.i_Bi
 i_Bi[2] => oneBitAdder:add2.i_Bi
-o_CarryOut <= oneBitAdder:add0.o_CarryOut
+o_CarryOut <= oneBitAdder:add2.o_CarryOut
 o_Sum[0] <= oneBitAdder:add0.o_Sum
 o_Sum[1] <= oneBitAdder:add1.o_Sum
 o_Sum[2] <= oneBitAdder:add2.o_Sum
 
 
-|threebitcounter|threeBitAdder:adder|oneBitAdder:add2
+|divider_top|divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add2
 i_CarryIn => int_CarryOut3.IN0
 i_CarryIn => int_CarryOut1.IN0
 i_Ai => int_CarryOut3.IN1
@@ -31,7 +1061,7 @@ o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
 o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|threebitcounter|threeBitAdder:adder|oneBitAdder:add1
+|divider_top|divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add1
 i_CarryIn => int_CarryOut3.IN0
 i_CarryIn => int_CarryOut1.IN0
 i_Ai => int_CarryOut3.IN1
@@ -42,7 +1072,7 @@ o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
 o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|threebitcounter|threeBitAdder:adder|oneBitAdder:add0
+|divider_top|divider_datapath:dp|threebitcounter:counter|threeBitAdder:adder|oneBitAdder:add0
 i_CarryIn => int_CarryOut3.IN0
 i_CarryIn => int_CarryOut1.IN0
 i_Ai => int_CarryOut3.IN1
@@ -53,7 +1083,7 @@ o_Sum <= o_Sum.DB_MAX_OUTPUT_PORT_TYPE
 o_CarryOut <= o_CarryOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|threebitcounter|nbitreg:reg
+|divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg
 reset_b => enARdFF_2:reg:2:biti.i_resetBar
 reset_b => enARdFF_2:reg:1:biti.i_resetBar
 reset_b => enARdFF_2:reg:0:biti.i_resetBar
@@ -74,7 +1104,7 @@ dout_b[1] <= enARdFF_2:reg:1:biti.o_qBar
 dout_b[2] <= enARdFF_2:reg:2:biti.o_qBar
 
 
-|threebitcounter|nbitreg:reg|enARdFF_2:\reg:2:biti
+|divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:2:biti
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -83,7 +1113,7 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|threebitcounter|nbitreg:reg|enARdFF_2:\reg:1:biti
+|divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:1:biti
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
@@ -92,7 +1122,141 @@ o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|threebitcounter|nbitreg:reg|enARdFF_2:\reg:0:biti
+|divider_top|divider_datapath:dp|threebitcounter:counter|nbitreg:reg|enARdFF_2:\reg:0:biti
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp
+GClock => enardFF_2:state0.i_clock
+GClock => enardFF_2:states1to9:1:state_i.i_clock
+GClock => enardFF_2:states1to9:2:state_i.i_clock
+GClock => enardFF_2:states1to9:3:state_i.i_clock
+GClock => enardFF_2:states1to9:4:state_i.i_clock
+GClock => enardFF_2:states1to9:5:state_i.i_clock
+GClock => enardFF_2:states1to9:6:state_i.i_clock
+GClock => enardFF_2:states1to9:7:state_i.i_clock
+GClock => enardFF_2:states1to9:8:state_i.i_clock
+GClock => enardFF_2:states1to9:9:state_i.i_clock
+reset => enardFF_2:state0.i_d
+reset => enardFF_2:states1to9:1:state_i.i_resetBar
+reset => enardFF_2:states1to9:2:state_i.i_resetBar
+reset => enardFF_2:states1to9:3:state_i.i_resetBar
+reset => enardFF_2:states1to9:4:state_i.i_resetBar
+reset => enardFF_2:states1to9:5:state_i.i_resetBar
+reset => enardFF_2:states1to9:6:state_i.i_resetBar
+reset => enardFF_2:states1to9:7:state_i.i_resetBar
+reset => enardFF_2:states1to9:8:state_i.i_resetBar
+reset => enardFF_2:states1to9:9:state_i.i_resetBar
+A_3 => state_input[1].IN1
+A_3 => state_input[2].IN1
+B_3 => state_input[3].IN1
+B_3 => state_input[4].IN1
+AxorB => state_input.IN1
+rltz => state_input[6].IN1
+rltz => state_input[7].IN1
+incEq5 => state_input[9].IN1
+incEq5 => state_input[5].IN1
+loadR <= loadR.DB_MAX_OUTPUT_PORT_TYPE
+loadD <= loadD.DB_MAX_OUTPUT_PORT_TYPE
+loadQ <= loadQ.DB_MAX_OUTPUT_PORT_TYPE
+selA <= enardFF_2:states1to9:2:state_i.o_q
+selB <= enardFF_2:states1to9:4:state_i.o_q
+selop1 <= selop1.DB_MAX_OUTPUT_PORT_TYPE
+selop2_0 <= selop2_0.DB_MAX_OUTPUT_PORT_TYPE
+selop2_1 <= selop1.DB_MAX_OUTPUT_PORT_TYPE
+sub <= sub.DB_MAX_OUTPUT_PORT_TYPE
+incI <= enardFF_2:states1to9:5:state_i.o_q
+shiftD <= enardFF_2:states1to9:8:state_i.o_q
+shiftQ <= shiftQ.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:state0
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:1:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:2:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:3:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:4:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:5:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:6:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:7:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:8:state_i
+i_resetBar => int_q.ACLR
+i_d => int_q.DATAIN
+i_enable => int_q.ENA
+i_clock => int_q.CLK
+o_q <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+o_qBar <= int_q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider_top|divider_controlpath:cp|enARdFF_2:\states1to9:9:state_i
 i_resetBar => int_q.ACLR
 i_d => int_q.DATAIN
 i_enable => int_q.ENA
