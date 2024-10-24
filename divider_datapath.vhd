@@ -58,7 +58,8 @@ component nbitaddersubtractor
         y : in STD_LOGIC_VECTOR(n-1 downto 0); 
         cin : in STD_LOGIC;		
         sum : out STD_LOGIC_VECTOR(n-1 downto 0);  
-        cout : out STD_LOGIC);		
+        cout : out STD_LOGIC;
+		  z: out STD_LOGIC);		
 end component;
 
 begin
@@ -126,10 +127,11 @@ begin
 	port map(x => op1, y => op2, 
 			 cin => sub, 
 			 sum => result, 
-			 cout => int_v);
+			 cout => int_v,
+			 z => open);
 
 	--quotient
-	quotient_serialinput <= '1' when loadQ = '1' else '0'; --IF THIS CAUSES PROBLEMS, JUST MAKE SERIAL INPUT A CONTROL SIGNAL
+	quotient_serialinput <= '1' when loadQ = '1' else '0'; 
 	quotient_shiftreg: nbitshiftreg
 	generic map(n => 8)
 	port map(d_in => result,

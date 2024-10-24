@@ -94,7 +94,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity divider_controlpath
 -- Compiling architecture struc of divider_controlpath
 
-} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd} {1 {vcom -work work -2002 -explicit {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd}
+} {} {}} {C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd} {1 {vcom -work work -2002 -explicit {C:\Users\harha\OneDrive\Desktop\CEG3155\Lab 2\nbitaddersubtractor.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

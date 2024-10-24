@@ -5,7 +5,8 @@ entity divider_top is
 
 	port(GClock, GReset: in std_logic;
 			OperandA, OperandB: in std_logic_vector(3 downto 0);
-			QuotientOut, RemainderOut: out std_logic_vector(3 downto 0));
+			QuotientOut, RemainderOut: out std_logic_vector(3 downto 0);
+			Zero, Overflow: out std_logic);
 
 end divider_top;
 
@@ -79,4 +80,6 @@ begin
 	--OUTPUTs
 	RemainderOut <= int_remainderOut(3 downto 0);
 	QuotientOut <= int_quotientOut(3 downto 0);
+	Zero <= int_z;
+	Overflow <= int_v;
 end struc;

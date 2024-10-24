@@ -15,7 +15,7 @@ L4
 VGD`NV8?H^aD:;cV_gQ3a^0
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1729394268.514000
+Z7 !s108 1729790772.716000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_controlpath.vhd|
 Z9 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_controlpath.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -39,7 +39,7 @@ R11
 !s100 9?WTZfKk_dgcFzV>IMzzo1
 !i10b 1
 Edivider_datapath
-Z12 w1729392975
+Z12 w1729733786
 R1
 R2
 R3
@@ -50,7 +50,7 @@ L4
 VLgC>bze7NV1zRazigPBUL2
 R6
 32
-Z15 !s108 1729394268.636000
+Z15 !s108 1729790772.833000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_datapath.vhd|
 Z17 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_datapath.vhd|
 R10
@@ -61,10 +61,9 @@ Astruc
 R1
 R2
 DEx4 work 16 divider_datapath 0 22 LgC>bze7NV1zRazigPBUL2
-l64
+l65
 L14
-V1O:]iaMJ_S6h7i^TYi_0B0
-!s100 B1EJF:cfH[5RdEm0_:MbC0
+V7fh9Hg2Ei[7]LJS?Se[Jn3
 R6
 32
 R15
@@ -72,9 +71,10 @@ R16
 R17
 R10
 R11
+!s100 X8FE:QR]iL5aSW98VX8d[0
 !i10b 1
 Edivider_top
-Z18 w1729394234
+Z18 w1729700296
 R1
 R2
 R3
@@ -82,12 +82,12 @@ Z19 8C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd
 Z20 FC:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd
 l0
 L4
-V`?<ZC_V`dcB=X4f9ab=Gc0
-!s100 RQ5bTdNejb[ji2lfA?7GL3
+V<kaaZm]<<=Tck@amGhLJ:2
+!s100 g7XFHeOZ20nLdKF6W8e_D0
 R6
 32
 !i10b 1
-Z21 !s108 1729394268.744000
+Z21 !s108 1729790772.944000
 Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd|
 Z23 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/divider_top.vhd|
 R10
@@ -95,11 +95,11 @@ R11
 Astruc
 R1
 R2
-DEx4 work 11 divider_top 0 22 `?<ZC_V`dcB=X4f9ab=Gc0
-l34
-L13
-Vb^HiCd5DiffP7R?cX6h8h2
-!s100 eFJTn9Lg>=0A9WjcJlC?Z3
+DEx4 work 11 divider_top 0 22 <kaaZm]<<=Tck@amGhLJ:2
+l35
+L14
+V_H_c3blLh3C8XViK<98l`3
+!s100 dhVTCj`<_5hDmDK2jVXYW3
 R6
 32
 !i10b 1
@@ -120,7 +120,7 @@ L31
 VW45mLHZkgINE^UQaXmP5[3
 R6
 32
-Z27 !s108 1729394267.113000
+Z27 !s108 1729790771.112000
 Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd|
 Z29 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/enARdFF_2.vhd|
 R10
@@ -155,7 +155,7 @@ L4
 V24YPBR8KmNfF3BoISBPoV2
 R6
 32
-Z33 !s108 1729394267.243000
+Z33 !s108 1729790771.324000
 Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/fulladder.vhd|
 Z35 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/fulladder.vhd|
 R10
@@ -190,7 +190,7 @@ L4
 VoGPhMH]O:7moS9n9>KSoi1
 R6
 32
-Z39 !s108 1729394267.349000
+Z39 !s108 1729790771.465000
 Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit2to1mux.vhd|
 Z41 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit2to1mux.vhd|
 R10
@@ -225,7 +225,7 @@ L4
 V7Xa@Z?W7Rf[e6Ijd:nglf0
 R6
 32
-Z45 !s108 1729394267.488000
+Z45 !s108 1729790771.602000
 Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit4to1mux.vhd|
 Z47 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbit4to1mux.vhd|
 R10
@@ -249,31 +249,31 @@ R11
 !s100 nz5nfXbN1HbX]EFn3W_5^0
 !i10b 1
 Enbitaddersubtractor
-Z48 w1729338280
+Z48 w1729702935
 R1
 R2
 R3
-Z49 8C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd
-Z50 FC:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd
+Z49 8C:\Users\harha\OneDrive\Desktop\CEG3155\Lab 2\nbitaddersubtractor.vhd
+Z50 FC:\Users\harha\OneDrive\Desktop\CEG3155\Lab 2\nbitaddersubtractor.vhd
 l0
 L4
-VGG`Z@lc=EKeFlaCV3]@g71
+VaJ_]9Dgm^XebPM>PeEA@00
 R6
 32
-Z51 !s108 1729394268.361000
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd|
-Z53 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitaddersubtractor.vhd|
+Z51 !s108 1729790772.577000
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:\Users\harha\OneDrive\Desktop\CEG3155\Lab 2\nbitaddersubtractor.vhd|
+Z53 !s107 C:\Users\harha\OneDrive\Desktop\CEG3155\Lab 2\nbitaddersubtractor.vhd|
 R10
 R11
-!s100 K^jgmhD;Ejh;Sj?kB_FHP3
+!s100 n[_39JYII>mFoLlfCAf[:2
 !i10b 1
 Astruc
 R1
 R2
-DEx4 work 19 nbitaddersubtractor 0 22 GG`Z@lc=EKeFlaCV3]@g71
-l27
-L16
-VVdPfLT7^:lmRdg?NY5gz<0
+DEx4 work 19 nbitaddersubtractor 0 22 aJ_]9Dgm^XebPM>PeEA@00
+l28
+L17
+VN=VE6o;ZTVfFVVcT:ib1i1
 R6
 32
 R51
@@ -281,7 +281,7 @@ R52
 R53
 R10
 R11
-!s100 hnWkGn=a9g6HR4MiCKGmP1
+!s100 U?6;e5K4K;jWLV11[Rf;81
 !i10b 1
 Enbitreg
 Z54 w1729216776
@@ -295,7 +295,7 @@ L4
 VYa4Y:JKC7TnMhUOU`JeZE2
 R6
 32
-Z57 !s108 1729394267.602000
+Z57 !s108 1729790771.724000
 Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd|
 Z59 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitreg.vhd|
 R10
@@ -330,7 +330,7 @@ L4
 V`UIW9Pi9em`M65i=jDO1J1
 R6
 32
-Z63 !s108 1729394267.709000
+Z63 !s108 1729790771.863000
 Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitshiftreg.vhd|
 Z65 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/nbitshiftreg.vhd|
 R10
@@ -365,7 +365,7 @@ L4
 VY@VBI[e^<;5JC<G<>MVXg0
 R6
 32
-Z69 !s108 1729394267.824000
+Z69 !s108 1729790772.011000
 Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebit4to1mux.vhd|
 Z71 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebit4to1mux.vhd|
 R10
@@ -400,7 +400,7 @@ L4
 V<WPaMLJ_Q??nLET?Qn5W02
 R6
 32
-Z75 !s108 1729394267.938000
+Z75 !s108 1729790772.142000
 Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd|
 Z77 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/onebitadder.vhd|
 R10
@@ -435,7 +435,7 @@ L4
 VShI=ALZlXdJ`YkFIYDADk0
 R6
 32
-Z81 !s108 1729394268.067000
+Z81 !s108 1729790772.290000
 Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd|
 Z83 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitadder.vhd|
 R10
@@ -470,7 +470,7 @@ L4
 VFBla6GY:;HEzF:EmVDEC<2
 R6
 32
-Z87 !s108 1729394268.246000
+Z87 !s108 1729790772.421000
 Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd|
 Z89 !s107 C:/Users/harha/OneDrive/Desktop/CEG3155/Lab 2/threebitcounter.vhd|
 R10

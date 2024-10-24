@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164;
+
+
+entity alu is
+	port(GClock, GReset: in std_logic;
+			OperationSelect: in std_logic_vector(1 downto 0);
+			OperandA, OperandB: in std_logic_vector(3 downto 0);
+			MuxOut: out std_logic_vector(7 downto 0);
+			CarryOut, ZeroOut, OverflowOut: out std_logic);
+end alu;
+
+
+architecture struc of alu is
+component divider_top 
+	port(GClock, GReset: in std_logic;
+			OperandA, OperandB: in std_logic_vector(3 downto 0);
+			QuotientOut, RemainderOut: out std_logic_vector(3 downto 0);
+			Zero, Overflow: out std_logic);
+end component;
+

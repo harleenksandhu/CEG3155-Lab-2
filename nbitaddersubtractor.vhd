@@ -7,14 +7,15 @@ entity nbitaddersubtractor is
         y : in STD_LOGIC_VECTOR(n-1 downto 0); -- Second operand
         cin : in STD_LOGIC;			-- Control signal for operation type
         sum : out STD_LOGIC_VECTOR(n-1 downto 0);  -- Result
-        cout : out STD_LOGIC		-- Carry out
+        cout : out STD_LOGIC;		-- Carry out
+		  z: out STD_LOGIC --Zero falg
     );
 	
 end nbitaddersubtractor;
 
 
 architecture struc of nbitaddersubtractor is
-SIGNAL carry, cins, yxor: STD_LOGIC_VECTOR(n-1 downto 0);
+SIGNAL carry, cins, yxor, int_sum: STD_LOGIC_VECTOR(n-1 downto 0);
 
 COMPONENT fulladder IS
 	PORT(x : in STD_LOGIC;
@@ -28,12 +29,14 @@ BEGIN
 	cins <= (others => cin);
 	yxor <= y XOR cins; -- Invert each bit of y if operation is subtraction
 	
-	FA0: fulladder PORT MAP(x => x(0), y => yxor(0), cin => cin, sum => sum(0), cout => carry(0)); 
+	FA0: fulladder PORT MAP(x => x(0), y => yxor(0), cin => cin, sum => int_sum(0), cout => carry(0)); 
 	addersubtractor: for i in 1 to n-1 generate
-	FAi: fulladder PORT MAP(x => x(i), y => yxor(i), cin => carry(i-1), sum => sum(i), cout => carry(i));
+	FAi: fulladder PORT MAP(x => x(i), y => yxor(i), cin => carry(i-1), sum => int_sum(i), cout => carry(i));
 	end generate;
 	
 	cout <= carry(n-1); -- Assign final carry out
+	z <= '1' when int_sum = (n-1 downto 0 => '0') else '0'; 
+	sum <= int_sum;
 
 end struc;
 
